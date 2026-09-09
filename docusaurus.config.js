@@ -20,11 +20,12 @@ const config = {
   },
 
   // Set the production url of your site here
-  url: 'https://LH-TH.github.io',
+  url: 'https://holab.cc',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  // 因为仓库名是 blog，部署在 https://LH-TH.github.io/blog/
-  baseUrl: '/blog/',
+  // 配置了自定义域名后，GitHub Pages 会把项目站点挂在域名根路径下，
+  // 因此 baseUrl 设为 '/'，站点地址为 https://holab.cc/
+  baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
