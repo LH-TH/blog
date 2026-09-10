@@ -1,11 +1,9 @@
 /**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
+ * 全局自定义样式
  */
 
-/* You can override the default Infima variables here. */
 :root {
+  /* 主题色 */
   --ifm-color-primary: #2e8555;
   --ifm-color-primary-dark: #29784c;
   --ifm-color-primary-darker: #277148;
@@ -13,11 +11,62 @@
   --ifm-color-primary-light: #33925d;
   --ifm-color-primary-lighter: #359962;
   --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
+
+  /* 代码 */
+  --ifm-code-font-size: 0.8rem;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  /* 代码块字体大小 */
+  --docusaurus-theme-code-block-font-size: 0.8rem;
+
+  /* 表格 */
+  --ifm-table-cell-padding: 0.2rem 0.75rem;  /* 上下间距压缩，左右保持默认 */
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
+/* 表格：横向是否铺满，字体大小 */
+table {
+  /* display: table; */
+  font-size: 0.8rem;
+  width: 100%;
+}
+
+/* 「编辑此页」固定到右上角 */
+.theme-blog-footer-edit-meta-row .theme-edit-this-page,
+.theme-doc-footer .theme-edit-this-page {
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  z-index: 100;
+  background: var(--ifm-background-surface-color);
+  padding: 4px 12px;
+  border-radius: 6px;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  font-size: 0.85rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* 悬停效果 */
+.theme-blog-footer-edit-meta-row .theme-edit-this-page:hover,
+.theme-doc-footer .theme-edit-this-page:hover {
+  text-decoration: none;
+  background: var(--ifm-color-primary-lightest);
+  border-color: var(--ifm-color-primary);
+}
+
+/* 代码块自动换行 */
+pre {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* 代码注释颜色改成棕褐色，更清晰 */
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #aa5500 !important;
+}
+
 [data-theme='dark'] {
   --ifm-color-primary: #25c2a0;
   --ifm-color-primary-dark: #21af90;
@@ -27,4 +76,37 @@
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+/* ===== 双击表格单元格复制：单元格短暂高亮 ===== */
+td.dblclick-copied,
+th.dblclick-copied {
+  background-color: var(--ifm-color-primary-lightest) !important;
+  transition: background-color 0.3s ease;
+}
+
+/* ===== 双击表格单元格复制：跟随鼠标的提示气泡 ===== */
+.table-copy-toast {
+  position: fixed;
+  z-index: 9999;
+  padding: 6px 12px;
+  max-width: 70vw;
+  background: rgba(33, 33, 33, 0.92);
+  color: #fff;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  pointer-events: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  opacity: 0;
+  transform: translate(-50%, -130%);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.table-copy-toast.show {
+  opacity: 1;
+  transform: translate(-50%, -150%);
 }

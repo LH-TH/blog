@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>时间戳转换工具</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230f766e'/%3E%3Ccircle cx='16' cy='16' r='10' fill='none' stroke='white' stroke-width='3'/%3E%3Cpath d='M16 9v7l5 3' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='16' cy='16' r='2' fill='%23facc15'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="/time-tool/styles.css">
+</head>
+<body>
+    <div class="header">
+        <h1>时间戳转换工具</h1>
+        <p>简单快捷的在线时间戳转换工具，支持秒级和毫秒级时间戳互转</p>
+    </div>
+
+    <div class="current-time-banner">
+        <div class="time-row">
+            <div class="time-item">
+                <div class="label">本地时间</div>
+                <div class="value" id="currentTime"></div>
+            </div>
+            <div class="time-item">
+                <div class="label">秒级时间戳</div>
+                <div class="value" id="currentTimestampSecond"></div>
+            </div>
+            <div class="time-item">
+                <div class="label">毫秒级时间戳</div>
+                <div class="value" id="currentTimestampMilli"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="converter-container">
+        <div class="converter-card">
+            <h2><span class="icon">📅</span> 时间转时间戳</h2>
+            <div class="input-group">
+                <label>选择日期和时间</label>
+                <input type="datetime-local" id="datetimeInput">
+            </div>
+            <button class="convert-btn" onclick="convertToTimestamp()">转换为时间戳</button>
+            <div class="result-box" id="timestampResult">
+                <div class="result-label">秒级时间戳</div>
+                <div class="result-value" id="timestampSecondValue"></div>
+                <div class="result-label" style="margin-top: 12px;">毫秒级时间戳</div>
+                <div class="result-value" id="timestampMilliValue"></div>
+                <button class="copy-btn" onclick="copyTimestamp(event)">复制秒级时间戳</button>
+                <button class="copy-btn" onclick="copyTimestamp2(event)">复制毫秒级时间戳</button>
+            </div>
+        </div>
+
+        <div class="converter-card">
+            <h2><span class="icon">🔢</span> 时间戳转时间</h2>
+            <div class="unit-selector">
+                <button class="unit-btn active" onclick="selectUnit('second', event)">秒级 (10位)</button>
+                <button class="unit-btn" onclick="selectUnit('millisecond', event)">毫秒级 (13位)</button>
+            </div>
+            <div class="input-group">
+                <label>输入时间戳</label>
+                <input type="text" id="timestampInput" placeholder="例如：1705228800">
+            </div>
+            <button class="convert-btn" onclick="convertToTime()">转换为时间</button>
+            <div class="result-box" id="timeResult">
+                <div class="result-label">本地时间</div>
+                <div class="result-value" id="timeLocalValue"></div>
+                <div class="result-label" style="margin-top: 12px;">ISO 8601格式</div>
+                <div class="result-value" id="timeISOValue"></div>
+                <button class="copy-btn" onclick="copyTime(event)">复制本地时间</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="format-section">
+        <h2 class="section-title">📋 常用时间格式转换</h2>
+        <div class="format-converter">
+            <div class="format-input-group">
+                <label>输入时间戳或选择当前时间</label>
+                <div class="format-input-row">
+                    <input type="text" id="formatTimestampInput" placeholder="输入时间戳（秒或毫秒）">
+                    <button class="format-btn" onclick="useCurrentTimeForFormat()">使用当前时间</button>
+                </div>
+            </div>
+            <div class="format-grid" id="formatGrid"></div>
+        </div>
+    </div>
+
+    <!-- <div class="feature-cards">
+        <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <h3>实时转换</h3>
+            <p>无需刷新页面，即时完成时间和时间戳的双向转换</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🎯</div>
+            <h3>多种格式</h3>
+            <p>支持秒级和毫秒级时间戳，满足不同开发场景需求</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🔒</div>
+            <h3>本地处理</h3>
+            <p>所有转换在浏览器本地完成，无需上传数据，安全可靠</p>
+        </div>
+    </div> -->
+    <script src="/time-tool/script.js"></script>
+</body>
+</html>
