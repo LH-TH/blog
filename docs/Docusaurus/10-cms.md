@@ -3,8 +3,6 @@ title: cms
 sidebar_position: 10
 ---
 
-## cms
-
 ### sveltia-cms 本地
 
 ```
