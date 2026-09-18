@@ -5,7 +5,7 @@ sidebar_position: 1
 
 ## 下载
 
-```
+```shell
 npm install -g @anthropic-ai/claude-code
 
 claude --version
@@ -15,7 +15,7 @@ claude --version
 
 ##### 在用户目录下C:\Users\haoti\.claude 新建settings.json, 填入key
 
-```
+```shell
 {
   "env": {
     "ANTHROPIC_AUTH_TOKEN": "sk-xxxxx",
@@ -32,12 +32,12 @@ claude --version
 
 ## 使用
 
-```
+```shell
 vscode 搜索 Claude Code for VS Code
 ```
 
 ## 更新
 
-```
+```shell
 npm update -g @anthropic-ai/claude-code
 ```

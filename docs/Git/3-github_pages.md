@@ -1,6 +1,6 @@
 ---
 title: github_page
-sidebar_position: 5
+sidebar_position: 3
 ---
 
 ## 搭建流程

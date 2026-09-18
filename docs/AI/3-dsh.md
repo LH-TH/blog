@@ -8,7 +8,7 @@ sidebar_position: 3
 
 ### 启动方式1
 
-```
+```shell
 npx @deepseek-ai/dsh web 
 ```
 
@@ -16,13 +16,13 @@ npx @deepseek-ai/dsh web
 
 ### 启动方式2
 
-```
+```shell
 dsh web
 ```
 
 #### 前提:
 
-```
+```shell
 npm i -g pnpm
 npm i -g @deepseek-ai/dsh
 ```
@@ -31,7 +31,7 @@ npm i -g @deepseek-ai/dsh
 
 ## 插件
 
-```
+```shell
 # web ui
 dsh plugin --profile web add @linxin666/dsh-web-all@latest 
 
@@ -54,6 +54,6 @@ dsh plugin --profile web approve-builds
 
 #### 删除插件命令
 
-```
+```shell
 dsh plugin --profile web remove @linxin666/dsh-web-all
 ```
