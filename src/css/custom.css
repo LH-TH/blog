@@ -16,9 +16,6 @@
   --ifm-code-font-size: 0.8rem;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 
-  /* 代码块字体大小 */
-  --docusaurus-theme-code-block-font-size: 0.8rem;
-
   /* 表格 */
   --ifm-table-cell-padding: 0.2rem 0.75rem;  /* 上下间距压缩，左右保持默认 */
 }
@@ -64,6 +61,7 @@ pre {
 .token.prolog,
 .token.doctype,
 .token.cdata {
+  font-style: normal !important;
   color: #aa5500 !important;
 }
 
