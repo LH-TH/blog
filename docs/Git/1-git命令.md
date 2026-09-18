@@ -3,8 +3,6 @@ title: git命令
 sidebar_position: 1
 ---
 
-## git命令
-
 ### 常用的
 
 ```shell

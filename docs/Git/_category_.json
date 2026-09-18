@@ -1,8 +1,9 @@
 {
   "label": "Git",
-  "position": 1,
+  "position": 3,
   "link": {
     "type": "generated-index",
+    "slug": "/category/git",
     "description": "无说明"
   }
 }

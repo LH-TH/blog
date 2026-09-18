@@ -106,6 +106,8 @@ const config = {
             items: [
               {to: '/docs/category/ai', label: 'AI'},
               {to: '/docs/category/docusaurus', label: 'Docusaurus'},
+              {to: '/docs/category/git', label: 'Git'},
+              {to: '/docs/category/network', label: '网络'},
             ],
           },
           // 右侧直接展示的链接
