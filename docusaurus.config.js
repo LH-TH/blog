@@ -10,8 +10,8 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: '若梦忆白',
-  tagline: '来者何人',
+  title: '迦勒底',
+  tagline: '可以是任何内容',
   favicon: 'img/guimizhizhu.png',
 
   // 全局客户端模块：双击表格单元格自动复制内容
