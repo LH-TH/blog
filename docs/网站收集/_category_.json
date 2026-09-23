@@ -1,0 +1,9 @@
+{
+  "label": "网站收集",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "slug": "/category/webcollection",
+    "description": "无说明"
+  }
+}

@@ -107,7 +107,8 @@ const config = {
               {to: '/docs/category/ai', label: 'AI'},
               {to: '/docs/category/docusaurus', label: 'Docusaurus'},
               {to: '/docs/category/git', label: 'Git'},
-              {to: '/docs/category/network', label: '网络'},
+              { to: '/docs/category/network', label: '网络' },
+              {to: '/docs/category/webcollection', label: '网站收集'},
             ],
           },
           // 右侧直接展示的链接
