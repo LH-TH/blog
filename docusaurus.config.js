@@ -12,7 +12,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 const config = {
   title: '若梦忆白',
   tagline: '来者何人',
-  favicon: 'img/yibai32.png',
+  favicon: 'img/guimizhizhu.png',
 
   // 全局客户端模块：双击表格单元格自动复制内容
   clientModules: [require.resolve('./src/clientModules/copyOnDoubleClick.ts')],
@@ -62,6 +62,7 @@ const config = {
           routeBasePath: '/',
           showReadingTime: false,
           blogSidebarCount: 'ALL',
+          blogSidebarTitle: '全部文章',
           feedOptions: {
             type: ['rss', 'atom'],
             xslt: true,
@@ -96,28 +97,28 @@ const config = {
         title: '',
         logo: {
           alt: 'yibai',
-          src: 'img/yibai32.png',
+          src: 'img/guimizhizhu.png',
         },
         items: [
-          {
-            type: 'dropdown',
-            label: '资料',
-            position: 'right',
-            items: [
-              {to: '/docs/category/ai', label: 'AI'},
-              {to: '/docs/category/docusaurus', label: 'Docusaurus'},
-              {to: '/docs/category/git', label: 'Git'},
-              { to: '/docs/category/network', label: '网络' },
-              {to: '/docs/category/webcollection', label: '网站收集'},
-            ],
-          },
-          // 右侧直接展示的链接
-          {to: '/pages/timelog', label: '时间戳', position: 'right'},
-          {
-            href: 'https://github.com/LH-TH/blog',
-            label: 'GitHub',
-            position: 'right',
-          },
+          // {
+          //   type: 'dropdown',
+          //   label: '资料',
+          //   position: 'right',
+          //   items: [
+          //     {to: '/docs/category/ai', label: 'AI'},
+          //     {to: '/docs/category/docusaurus', label: 'Docusaurus'},
+          //     {to: '/docs/category/git', label: 'Git'},
+          //     { to: '/docs/category/network', label: '网络' },
+          //     {to: '/docs/category/webcollection', label: '网站收集'},
+          //   ],
+          // },
+          // // 右侧直接展示的链接
+          // {to: '/pages/timelog', label: '时间戳', position: 'right'},
+          // {
+          //   href: 'https://github.com/LH-TH/blog',
+          //   label: 'GitHub',
+          //   position: 'right',
+          // },
         ],
       },
       footer: {

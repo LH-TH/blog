@@ -20,6 +20,31 @@
   --ifm-table-cell-padding: 0.2rem 0.75rem;  /* 上下间距压缩，左右保持默认 */
 }
 
+/* 中文显示优化 */
+.markdown {
+  line-height: 1.85; 
+  letter-spacing: 0.5px;
+  font-size: 16px;
+}
+
+/* 中文段落缩进 */
+.markdown p {
+  margin-bottom: 1.5rem;
+  text-indent: 2em;
+}
+
+/* 引用内容斜体 */
+.markdown blockquote {
+  font-style: italic;
+}
+
+  /* 引用内容不缩进 */
+.markdown blockquote p,
+.markdown li p,
+.markdown .caption {
+  text-indent: 0;
+}
+
 /* 表格：横向是否铺满，字体大小 */
 table {
   /* display: table; */
