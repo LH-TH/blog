@@ -1,5 +1,5 @@
 ---
-title: github_page
+title: github_pages
 sidebar_position: 3
 ---
 

@@ -83,3 +83,23 @@ sc.exe config gitea start= delayed-auto
 RUN_USER = LING$
 ```
 
+
+
+### 备份
+
+```shell
+# 1.关闭服务
+# 2.输入命令
+cd /d D:\develop\gitea
+gitea-1.27.3.exe dump -c custom\conf\app.ini -f D:\develop\gitea\gitea-dump.zip
+```
+
+### 恢复(AI文)
+
+| 解压出的文件/文件夹 | 复制目标位置                                | 说明                                                         |
+| :------------------ | :------------------------------------------ | :----------------------------------------------------------- |
+| **custom/**         | `D:\develop\gitea\custom\`                  | 覆盖原有的 custom 文件夹（包含自定义配置）                   |
+| **data/**           | `D:\develop\gitea\data\`                    | 覆盖原有的 data 文件夹（包含附件、头像、LFS、以及 SQLite 数据库文件 `gitea.db`） |
+| **repos/**          | `D:\develop\gitea\data\gitea-repositories\` | 将 repos 里的内容复制到仓库目录中                            |
+| **app.ini**         | `D:\develop\gitea\custom\conf\app.ini`      | 覆盖配置文件（注意路径，通常是放在 custom/conf 下）          |
+| **gitea-db.sql**    | *(可忽略)*                                  | 用于迁移到 MySQL/PostgreSQL，纯 SQLite 恢复不用它            |

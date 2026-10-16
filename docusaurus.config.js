@@ -105,11 +105,11 @@ const config = {
             label: '资料',
             position: 'right',
             items: [
-              {to: '/docs/category/ai', label: 'AI'},
-              {to: '/docs/category/docusaurus', label: 'Docusaurus'},
-              {to: '/docs/category/git', label: 'Git'},
-              { to: '/docs/category/network', label: '网络' },
-              {to: '/docs/category/webcollection', label: '网站收集'},
+              {to: '/docs/AI/dsh', label: 'AI'},
+              {to: '/docs/Docusaurus/使用说明', label: 'Docusaurus'},
+              {to: '/docs/Git/git命令', label: 'Git'},
+              {to: '/docs/网络/科学上网', label: '网络' },
+              {to: '/docs/工具/网站收集', label: '工具'},
             ],
           },
           // 右侧直接展示的链接
